@@ -94,7 +94,7 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            vrv7222/601_module10:latest
-            vrv7222/601_module10:${{ github.sha }}
-          cache-from: type=registry,ref=vrv7222/601_module10:cache
-          cache-to: type=registry,ref=vrv7222/601_module10:cache,mode=max
+            vrv7222/601_module11:latest
+            vrv7222/601_module11:${{ github.sha }}
+          cache-from: type=registry,ref=vrv7222/601_module11:cache
+          cache-to: type=registry,ref=vrv7222/601_module11:cache,mode=max

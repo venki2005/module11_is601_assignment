@@ -1,6 +1,6 @@
 # 📦 FastAPI Secure User Management & Authentication Service
 
-A secure FastAPI web application featuring an asynchronous/synchronous database architecture powered by SQLAlchemy, robust input validation and serialization via Pydantic, password hashing, and token-based authentication. The project includes a comprehensive automated test suite and a continuous integration/continuous deployment (CI/CD) pipeline built with GitHub Actions that automates testing and publishes production container images to Docker Hub.
+A full-stack FastAPI web application featuring a PostgreSQL database layer powered by SQLAlchemy, polymorphic calculation modeling with the Factory design pattern, strict input validation and serialization via Pydantic v2, password hashing, and JWT authentication. The project includes an 87-test automated suite (unit, integration, and Playwright E2E tests) and a GitHub Actions CI/CD pipeline that tests, security-scans, and publishes multi-architecture container images to Docker Hub.
 
 ---
 
@@ -8,11 +8,11 @@ A secure FastAPI web application featuring an asynchronous/synchronous database 
 
 The automated CI/CD pipeline packages and deploys production-ready container images directly to Docker Hub upon passing all automated tests[cite: 7].
 
-- **Docker Hub Repository**: [https://hub.docker.com/r/vrv7222/601_module10](https://hub.docker.com/r/vrv7222/601_module10)
-- **Tags & Releases**: [https://hub.docker.com/r/vrv7222/601_module10/tags](https://hub.docker.com/r/vrv7222/601_module10/tags)
+- **Docker Hub Repository**: [https://hub.docker.com/r/vrv7222/601_module11](https://hub.docker.com/r/vrv7222/601_module11)
+- **Tags & Releases**: [https://hub.docker.com/r/vrv7222/601_module11/tags](https://hub.docker.com/r/vrv7222/601_module11/tags)
 - **Pull Latest Image**:
   ```bash
-  docker pull vrv7222/601_module10:latest
+  docker pull vrv7222/601_module11:latest
   ```
 
 ---

@@ -2,6 +2,7 @@
 
 from .base import UserBase, PasswordMixin, UserCreate, UserLogin
 from .user import UserResponse, Token, TokenData
+from .calculation import CalculationBase, CalculationCreate, CalculationRead
 
 __all__ = [
     "UserBase",
@@ -11,4 +12,7 @@ __all__ = [
     "UserResponse",
     "Token",
     "TokenData",
+    "CalculationBase",
+    "CalculationCreate",
+    "CalculationRead",
 ]

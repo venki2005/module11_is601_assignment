@@ -5,7 +5,7 @@ from typing import Optional, Dict, Any
 
 from sqlalchemy import Column, String, DateTime, Boolean
 from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, relationship
 from pydantic import ValidationError
 
 from app.database import Base
@@ -28,18 +28,23 @@ class User(Base):
     is_verified = Column(Boolean, default=False, nullable=False)
     last_login = Column(DateTime(timezone=True), nullable=True)
     created_at = Column(
-        DateTime(timezone=True), 
-        default=lambda: datetime.now(timezone.utc), 
+        DateTime(timezone=True),
+        default=lambda: datetime.now(timezone.utc),
         nullable=False
     )
     updated_at = Column(
-        DateTime(timezone=True), 
-        default=lambda: datetime.now(timezone.utc), 
-        onupdate=lambda: datetime.now(timezone.utc), 
+        DateTime(timezone=True),
+        default=lambda: datetime.now(timezone.utc),
+        onupdate=lambda: datetime.now(timezone.utc),
         nullable=False
     )
 
-    # Property alias so code/grading referencing password_hash still resolves
+    calculations = relationship(
+        "Calculation",
+        back_populates="user",
+        cascade="all, delete-orphan"
+    )
+
     @property
     def password_hash(self) -> str:
         return self.password
@@ -50,8 +55,6 @@ class User(Base):
 
     def __repr__(self):
         return f"<User(name={self.first_name} {self.last_name}, email={self.email})>"
-
-    # --- Methods expected by integration tests ---
 
     @staticmethod
     def hash_password(password: str) -> str:
