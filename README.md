@@ -4,15 +4,29 @@ A full-stack FastAPI web application featuring a PostgreSQL database layer power
 
 ---
 
+## 📸 Deployment & CI/CD Screenshots
+
+### GitHub Actions Workflow
+
+![GitHub Actions Success](screenshots/github-actions-success.png)
+
+### Docker Hub Deployment
+
+![Docker Hub Deployment](screenshots/docker-hub-deployment.png)
+
+---
+
 ## 🐳 Docker Hub Repository
 
-The automated CI/CD pipeline packages and deploys production-ready container images directly to Docker Hub upon passing all automated tests[cite: 7].
+The automated CI/CD pipeline packages and deploys production-ready container images directly to Docker Hub upon passing all automated tests.
 
 - **Docker Hub Repository**: [https://hub.docker.com/r/vrv7222/601_module11](https://hub.docker.com/r/vrv7222/601_module11)
 - **Tags & Releases**: [https://hub.docker.com/r/vrv7222/601_module11/tags](https://hub.docker.com/r/vrv7222/601_module11/tags)
 - **Pull Latest Image**:
+
   ```bash
   docker pull vrv7222/601_module11:latest
+
   ```
 
 ---
